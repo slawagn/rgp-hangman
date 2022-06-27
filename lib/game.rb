@@ -49,18 +49,18 @@ class Game
 
   private
 
-    def letters_normalized
-      @letters.map { |char| normalize(char) }
-    end
+  def letters_normalized
+    @letters.map { |char| normalize(char) }
+  end
 
-    def normalize(char)
-      case char
-      when 'Ё'
-        'Е'
-      when 'Й'
-        'И'
-      else
-        char
-      end
+  def normalize(char)
+    case char
+    when 'Ё'
+      'Е'
+    when 'Й'
+      'И'
+    else
+      char
     end
+  end
 end
