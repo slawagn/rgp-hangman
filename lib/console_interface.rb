@@ -16,7 +16,7 @@ class ConsoleInterface
   end
 
   def errors_joined
-    @game.errors.join(", ")
+    @game.errors.join(', ')
   end
 
   def figure
@@ -24,7 +24,7 @@ class ConsoleInterface
   end
 
   def get_input
-    print "Введите следующую букву: "
+    print 'Введите следующую букву: '
     letter = gets[0].upcase
     letter
   end
@@ -39,7 +39,7 @@ class ConsoleInterface
     INTERFACE
 
     if @game.won?
-      puts "Поздравляем, вы выиграли!"
+      puts 'Поздравляем, вы выиграли!'
     elsif @game.lost?
       puts "Вы проиграли, загаданное слово: #{@game.word}"
     end

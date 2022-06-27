@@ -1,7 +1,7 @@
 require_relative 'lib/console_interface'
 require_relative 'lib/game'
 
-puts "Всем привет!"
+puts 'Всем привет!'
 
 word =
   File.readlines(
