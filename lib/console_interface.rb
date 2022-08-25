@@ -1,3 +1,5 @@
+require 'colorize'
+
 class ConsoleInterface
   FIGURES =
     Dir[
@@ -30,13 +32,10 @@ class ConsoleInterface
   end
 
   def print_out
-    puts <<~INTERFACE
-      Слово: #{word_to_show}
-      #{figure}
-      Ошибки (#{@game.error_count}): #{errors_joined}
-      У вас осталось ошибок: #{@game.errors_left}
-
-    INTERFACE
+    puts "Слово: #{word_to_show}".colorize(:blue)
+    puts figure.colorize(:yellow)
+    puts "Ошибки (#{@game.error_count}): #{errors_joined}".colorize(:red)
+    puts "У вас осталось ошибок: #{@game.errors_left}"
 
     if @game.won?
       puts 'Поздравляем, вы выиграли!'
